@@ -55,7 +55,7 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "LGD_Bot",
         language: "french",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/fr.json",
+        chatLink: "https://rawgit.com/Mid0na/LGDbot/master/lang/fr.json",
         startupCap: 200, // 1-200
         startupVolume: 15, // 0-100
         startupEmoji: true, // true or false
