@@ -33,14 +33,14 @@
          */
 
         bot.commands.baconCommand = {
-            command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
+            command: 'lgdbot',  //The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', //Minimum user permission to use the command
             type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
             functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                    API.sendChat("/me Bacon!!!");
+                    API.sendChat("/me Heroes do their best, Legends reach the top !");
                 }
             }
         };
@@ -53,14 +53,14 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
-        language: "english",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
-        startupCap: 1, // 1-200
-        startupVolume: 0, // 0-100
-        startupEmoji: false, // true or false
+        botName: "LGD_Bot",
+        language: "french",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/fr.json",
+        startupCap: 200, // 1-200
+        startupVolume: 15, // 0-100
+        startupEmoji: true, // true or false
         maximumAfk: 120,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
@@ -68,22 +68,22 @@
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
-        voteSkip: false,
+        voteSkip: true,
         voteSkipLimit: 10,
         timeGuard: true,
-        maximumSongLength: 10,
+        maximumSongLength: 8,
         autodisable: true,
-        commandCooldown: 30,
+        commandCooldown: 10,
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
-            ["theme", "This song does not fit the room theme. "],
-            ["op", "This song is on the OP list. "],
-            ["history", "This song is in the history. "],
-            ["mix", "You played a mix, which is against the rules. "],
-            ["sound", "The song you played had bad sound quality or no sound. "],
-            ["nsfw", "The song you contained was NSFW (image or sound). "],
-            ["unavailable", "The song you played was not available for some users. "]
+            ["theme", "Cette chanson ne correspond pas au theme de la salle. "],
+            ["op", "Cette chanson est dans la liste des chansons trop jouees. "],
+            ["history", "Cette chanson est deja passee. "],
+            ["mix", "Les mix ne sont pas autorises. "],
+            ["sound", "Cette chanson a un son de mauvaise qualite / pas de son. "],
+            ["nsfw", "La chanson proposee a un contenu NSFW (image ou son). "],
+            ["unavailable", "La chanson proposee est indisponible pour les utilisateurs. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
@@ -96,9 +96,9 @@
         opLink: null,
         rulesLink: null,
         themeLink: null,
-        fbLink: null,
-        youtubeLink: null,
-        website: null,
+        fbLink: "https://www.facebook.com/legends.esport.eu",
+        youtubeLink: "https://www.youtube.com/channel/UC5xy4phdRJ2tCsaXSfazZ_w",
+        website: "http://legends-esport.eu",
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
